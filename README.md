@@ -2,6 +2,10 @@
 
 WeatherSense is a Single Page Application (SPA) that provides accurate weather forecasts based on the user's location.
 
+## Updates
+
+![last-updated UI](<public/Screenshot 1.png>)
+
 ## Features
 
 - Automatically detects user location to provide weather forecasts.
