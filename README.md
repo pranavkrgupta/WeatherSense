@@ -4,7 +4,7 @@ WeatherSense is a Single Page Application (SPA) that provides accurate weather f
 
 ## Updates
 
-![last-updated UI](<public/Screenshot 2.png>)
+![last-updated UI](<public/Screenshot 3.png>)
 
 ## Features
 
