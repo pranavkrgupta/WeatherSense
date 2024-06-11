@@ -14,6 +14,15 @@ function App() {
     todayTemperature: 32,
   };
 
+  const weeklyForecasts = [
+    { day: "Mon", realfeel: 10, wind: 15, chancesofrain: 10, uvindex: 5 },
+    { day: "Tue", realfeel: 30, wind: 20, chancesofrain: 20, uvindex: 6 },
+    { day: "Wed", realfeel: 22, wind: 5, chancesofrain: 10, uvindex: 5 },
+    { day: "Thu", realfeel: 16, wind: 10, chancesofrain: 20, uvindex: 6 },
+    { day: "Fri", realfeel: 32, wind: 15, chancesofrain: 10, uvindex: 5 },
+    // Add more forecast objects as needed
+  ];
+
   return (
     <div className="app">
       <div className="grid-container">
@@ -27,7 +36,7 @@ function App() {
         <Menu />
         <LocalActivities />
         <HourlyForecast />
-        <WeeklyForecast />
+        <WeeklyForecast weeklyForecasts={weeklyForecasts} />
       </div>
     </div>
   );
