@@ -12,7 +12,6 @@ function App() {
     city: "Jamshedpur",
     weatherCondition: "Thunder",
     todayTemperature: 32,
-    todayDate: new Date().toDateString(),
   };
 
   return (
