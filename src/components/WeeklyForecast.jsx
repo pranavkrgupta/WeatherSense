@@ -3,14 +3,16 @@ import { FaWind } from "react-icons/fa";
 import { FaCloudSun } from "react-icons/fa";
 import { SiRainmeter } from "react-icons/si";
 import { AiFillSun } from "react-icons/ai";
-import { useState } from "react";
+import { FaClock } from "react-icons/fa6";
+
+import { useState, useEffect } from "react";
 
 const AirConditionsElement = ({ icon, name, value }) => {
   return (
     <div className="">
       <div className="flex items-center">
         {icon}
-        <p className="ml-2 text-sm">{name}</p>
+        <p className="ml-2 text-xs">{name}</p>
       </div>
       <p className="ml-8 text-sm">{value}</p>
     </div>
@@ -19,11 +21,20 @@ const AirConditionsElement = ({ icon, name, value }) => {
 
 const WeeklyForecast = ({ weeklyForecasts }) => {
   const [selectedDayIndex, setSelectedDayIndex] = useState(0);
+  const [currentTime, setCurrentTime] = useState(new Date());
 
   const handleDayClick = (index) => {
     setSelectedDayIndex(index);
   };
   const forecast = weeklyForecasts[selectedDayIndex];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="card weeklyforecast flex flex-col justify-between text-white p-6">
@@ -47,10 +58,17 @@ const WeeklyForecast = ({ weeklyForecasts }) => {
         ))}
       </div>
 
+      <div className="flex items-center justify-center gap-2">
+        <FaClock className="w-3 h-3" />
+        <p className="text-base font-semibold">
+          {currentTime.toLocaleTimeString()}
+        </p>
+      </div>
+
       {/* Air Conditions: stack conditions vertically */}
 
       <div className="flex flex-col gap-4">
-        <h1 className="text-sm font-bold mb-2">AIR CONDITIONS</h1>
+        <h1 className="text-sm font-semibold">AIR CONDITIONS</h1>
 
         <AirConditionsElement
           icon={<FaTemperatureFull className="w-6 h-6" />}
