@@ -3,6 +3,7 @@ import { FaWind } from "react-icons/fa";
 import { FaCloudSun } from "react-icons/fa";
 import { SiRainmeter } from "react-icons/si";
 import { AiFillSun } from "react-icons/ai";
+import { useState } from "react";
 
 const AirConditionsElement = ({ icon, name, value }) => {
   return (
@@ -17,7 +18,13 @@ const AirConditionsElement = ({ icon, name, value }) => {
 };
 
 const WeeklyForecast = ({ weeklyForecasts }) => {
-  const forecast = weeklyForecasts[0];
+  const [selectedDayIndex, setSelectedDayIndex] = useState(0);
+
+  const handleDayClick = (index) => {
+    setSelectedDayIndex(index);
+  };
+  const forecast = weeklyForecasts[selectedDayIndex];
+
   return (
     <div className="card weeklyforecast flex flex-col justify-between text-white p-6">
       {/* Week Navbar: distribute items evenly across the container */}
@@ -26,7 +33,13 @@ const WeeklyForecast = ({ weeklyForecasts }) => {
         {weeklyForecasts.map((fc, index) => (
           <div
             key={index}
-            className="flex flex-col items-center hover:text-white"
+            className="flex flex-col items-center hover:text-white cursor-pointer"
+            onClick={() => handleDayClick(index)}
+            style={
+              selectedDayIndex === index
+                ? { transform: "scale(1.2)", color: "white" }
+                : {}
+            }
           >
             <p>{fc.day.toUpperCase()}</p>
             <FaCloudSun className="h-6 w-6" />
