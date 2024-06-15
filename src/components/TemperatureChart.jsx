@@ -36,8 +36,8 @@ const TemperatureChart = ({ data }) => {
 
   const options = {
     responsive: true,
-    // aspectRatio: 3,
-    tension: 0.3,
+    maintainAspectRatio: false,
+    tension: 0.5,
     plugins: {
       datalabels: {
         align: "top",
@@ -53,9 +53,9 @@ const TemperatureChart = ({ data }) => {
         min: 30,
         max: 45,
         ticks: {
-          maxTicksLimit: 2,
+          maxTicksLimit: 3,
         },
-        // display: false,
+        display: false,
         grid: {
           display: false,
         },
@@ -63,7 +63,6 @@ const TemperatureChart = ({ data }) => {
       x: {
         ticks: {
           color: "white",
-          // maxRotation: 0,
         },
         grid: {
           display: false,
@@ -85,7 +84,11 @@ const TemperatureChart = ({ data }) => {
     ],
   };
 
-  return <Line ref={chartRef} data={chartData} options={options} />;
+  return (
+    <div style={{ width: "1500px" }}>
+      <Line ref={chartRef} data={chartData} options={options} />
+    </div>
+  );
 };
 
 export default TemperatureChart;

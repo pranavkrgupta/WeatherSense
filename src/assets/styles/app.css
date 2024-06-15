@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .app {
   background-image: url("./../images/weather_background.jpg");
   background-size: cover; /* Make sure the background covers the entire element */
@@ -23,7 +26,7 @@
   grid-template-rows: 1fr 2fr 2fr;
   grid-template-areas:
     ". locationweathersummary  weatherimage"
-    "menu hourlyforecast weeklyforecast"
+    "menu localactivities weeklyforecast"
     "menu hourlyforecast weeklyforecast";
 }
 
@@ -37,6 +40,16 @@
 
 .hourlyforecast {
   grid-area: hourlyforecast;
+  overflow: hidden;
+}
+
+/* #graphContainer {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+} */
+
+#graphContainer::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
 }
 
 .menu {

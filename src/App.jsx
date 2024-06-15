@@ -133,7 +133,7 @@ function App() {
         />
         <WeatherImage />
         <Menu />
-        {/* <LocalActivities /> */}
+        <LocalActivities />
         <HourlyForecast hourlyData={hourlyData} />
         <WeeklyForecast weeklyForecasts={weeklyForecasts} />
       </div>
