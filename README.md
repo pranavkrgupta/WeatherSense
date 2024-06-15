@@ -4,7 +4,7 @@ WeatherSense is a Single Page Application (SPA) that provides accurate weather f
 
 ## Updates
 
-![last-updated UI](<public/Screenshot 4.png>)
+![last-updated UI](<public/Screenshot 5.png>)
 
 ## Features
 
@@ -17,7 +17,7 @@ WeatherSense is a Single Page Application (SPA) that provides accurate weather f
 
 - React.js for the frontend UI.
 - Tailwind CSS for styling.
-- OpenWeatherMap API for weather data.
+- open-meteo API for weather data.
 -
 
 ## Installation

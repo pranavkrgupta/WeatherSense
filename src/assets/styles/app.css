@@ -1,57 +1,52 @@
 .app {
-    background-image: url('./../images/weather_background.jpg');
-    background-size: cover; /* Make sure the background covers the entire element */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background from repeating */
-    width: 100%;
-    height: 100vh; /* Adjust the height as needed */
-    display: flex; /* Use flexbox for centering content */
-    padding: 10px 50px 30px;
-  }
+  background-image: url("./../images/weather_background.jpg");
+  background-size: cover; /* Make sure the background covers the entire element */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  width: 100%;
+  height: 100vh; /* Adjust the height as needed */
+  display: flex; /* Use flexbox for centering content */
+  padding: 10px 50px 30px;
+}
 
-  .card{
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 25px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    /* margin: 10px; */
-    /* display: inline-block; */
-    height: auto;
-  }
+.card {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  /* height: auto; */
+}
 
-  .grid-container{
-    width: 100%;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 70px 2fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr;
-    grid-template-areas: 
+.grid-container {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 70px 2fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-areas:
     ". locationweathersummary  weatherimage"
-    "menu localactivities weeklyforecast"
     "menu hourlyforecast weeklyforecast"
-    ;
-  }
+    "menu hourlyforecast weeklyforecast";
+}
 
-  .locationweathersummary{
-    grid-area: locationweathersummary;
-  }
+.locationweathersummary {
+  grid-area: locationweathersummary;
+}
 
-  .weatherimage{
-    grid-area: weatherimage;
-  }
+.weatherimage {
+  grid-area: weatherimage;
+}
 
-  .hourlyforecast{
-    grid-area: hourlyforecast;
-  }
+.hourlyforecast {
+  grid-area: hourlyforecast;
+}
 
-  .menu{
-    grid-area: menu;
-  }
+.menu {
+  grid-area: menu;
+}
 
-  .localactivities{
-    grid-area: localactivities;
-  }
+.localactivities {
+  grid-area: localactivities;
+}
 
-  .weeklyforecast{
-    grid-area: weeklyforecast;
-  }
-
+.weeklyforecast {
+  grid-area: weeklyforecast;
+}
