@@ -1,7 +1,6 @@
 import React from "react";
 import "./assets/styles/app.css";
 import LocationWeatherSummary from "./components/LocationWeatherSummary";
-import Menu from "./components/Menu";
 import WeatherImage from "./components/WeatherImage";
 import LocalActivities from "./components/LocalActivities";
 import HourlyForecast from "./components/HourlyForecast";
@@ -132,7 +131,6 @@ function App() {
           todayDate={WeatherData.todayDate}
         />
         <WeatherImage />
-        <Menu />
         <LocalActivities />
         <HourlyForecast hourlyData={hourlyData} />
         <WeeklyForecast weeklyForecasts={weeklyForecasts} />
