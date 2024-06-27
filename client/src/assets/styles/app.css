@@ -26,7 +26,7 @@
   grid-template-rows: 1fr 2fr 2fr;
   grid-template-areas:
     "locationweathersummary  weatherimage"
-    "localactivities weeklyforecast"
+    "weeklyTemp weeklyforecast"
     "hourlyforecast weeklyforecast";
 }
 
@@ -56,8 +56,8 @@
   grid-area: menu;
 }
 
-.localactivities {
-  grid-area: localactivities;
+.weeklyTemp {
+  grid-area: weeklyTemp;
 }
 
 .weeklyforecast {
