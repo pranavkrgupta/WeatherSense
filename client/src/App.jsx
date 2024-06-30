@@ -121,6 +121,20 @@ function App() {
     },
   ];
 
+  const daily = {
+    time: [
+      "2024-06-30",
+      "2024-07-01",
+      "2024-07-02",
+      "2024-07-03",
+      "2024-07-04",
+      "2024-07-05",
+      "2024-07-06",
+    ],
+    temperature_2m_max: [25.8, 20.8, 17.7, 20.6, 17, 22.2, 28],
+    temperature_2m_min: [18, 14.4, 12.7, 13.2, 13.2, 12.6, 15.2],
+  };
+
   return (
     <div className="app">
       <div className="grid-container">
@@ -131,7 +145,7 @@ function App() {
           todayDate={WeatherData.todayDate}
         />
         <WeatherImage />
-        <WeeklyTemp />
+        <WeeklyTemp daily={daily} />
         <HourlyForecast hourlyData={hourlyData} />
         <WeeklyForecast weeklyForecasts={weeklyForecasts} />
       </div>
